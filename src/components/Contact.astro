@@ -26,7 +26,7 @@ const { lang } = Astro.props;
     >
       <input type="hidden" name="access_key" value="fff2a0e5-d4c1-48ce-a41d-93091de94ce5" />
       <input type="hidden" name="subject" value="Nou contacte des de Prep Pal" />
-      <input type="hidden" name="redirect" value={`https://preppal-web.vercel.app/${lang}/gracies`} />
+      <input type="hidden" name="redirect" value={`${Astro.site}${lang}/gracies`} />
       <input type="checkbox" name="botcheck" class="hidden" />
 
       <div class="grid sm:grid-cols-2 gap-5">

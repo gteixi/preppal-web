@@ -8,6 +8,9 @@ interface Props {
 }
 
 const { title, description, lang } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const otherLang = lang === "ca" ? "es" : "ca";
+const altURL = new URL(Astro.url.pathname.replace(`/${lang}/`, `/${otherLang}/`), Astro.site);
 ---
 
 <!doctype html>
@@ -16,13 +19,38 @@ const { title, description, lang } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#ee7712" />
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href={canonicalURL.href} />
+    <link rel="alternate" hreflang={lang} href={canonicalURL.href} />
+    <link rel="alternate" hreflang={otherLang} href={altURL.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:image" content={`${Astro.site}og.jpg`} />
+    <meta property="og:site_name" content="Prep Pal" />
+    <meta property="og:locale" content={lang === "ca" ? "ca_ES" : "es_ES"} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${Astro.site}og.jpg`} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
   <body class="bg-warm-50 text-warm-900 font-sans antialiased">

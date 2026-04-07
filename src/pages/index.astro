@@ -1,3 +1,26 @@
 ---
-return Astro.redirect("/ca/");
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import Pricing from "../components/Pricing.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import { t, defaultLang } from "../i18n/translations";
+import "../styles/global.css";
+
+const lang = defaultLang;
 ---
+
+<Layout title={t(lang, "meta.title")} description={t(lang, "meta.description")} lang={lang}>
+  <Header lang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <Features lang={lang} />
+    <HowItWorks lang={lang} />
+    <Pricing lang={lang} />
+    <Contact lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { defaultLang } from "../i18n/translations";
+import "../styles/global.css";
+
+const lang = defaultLang;
+---
+
+<Layout title="404 — Prep Pal" description="Pàgina no trobada" lang={lang}>
+  <div class="min-h-screen flex flex-col">
+    <Header lang={lang} />
+    <main class="pt-32 pb-20 px-6 flex-1">
+      <div class="max-w-xl mx-auto text-center">
+        <div class="text-8xl font-bold text-brand-500 mb-4">404</div>
+        <h1 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">
+          Pàgina no trobada
+        </h1>
+        <p class="text-lg text-warm-500 mb-8">
+          La pàgina que busques no existeix.
+        </p>
+        <a
+          href={`/${lang}/`}
+          class="inline-block bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-colors"
+        >
+          Tornar a l'inici
+        </a>
+      </div>
+    </main>
+    <Footer lang={lang} />
+  </div>
+</Layout>
