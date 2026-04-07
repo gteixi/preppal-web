@@ -60,7 +60,7 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Cada cop que produeixes, toca el boto i registra la quantitat. El lot i la caducitat es calculen sols.",
     "how.step3.title": "Visualitza el teu stock",
     "how.step3.description":
-      "El panell principal mostra tot el stock organitzat per estacions amb codis de color segons la caducitat. Verd, groc o vermell d'un cop d'ull.",
+      "El panell principal mostra tot el stock organitzat per estacions amb codis de color segons la caducitat.",
 
     // Pricing
     "pricing.title": "Un pla senzill, sense sorpreses",
@@ -163,7 +163,7 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Cada vez que produces, toca el boton y registra la cantidad. El lote y la caducidad se calculan solos.",
     "how.step3.title": "Visualiza tu stock",
     "how.step3.description":
-      "El panel principal muestra todo el stock organizado por estaciones con codigos de color segun la caducidad. Verde, amarillo o rojo de un vistazo.",
+      "El panel principal muestra todo el stock organizado por estaciones con codigos de color segun la caducidad.",
 
     // Pricing
     "pricing.title": "Un plan sencillo, sin sorpresas",
