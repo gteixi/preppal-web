@@ -1,0 +1,63 @@
+---
+const features = [
+  {
+    icon: "📦",
+    title: "Stock en temps real",
+    description:
+      "Visualitza el stock actual de cada producte agrupat per estacio: Partida, Cambra, Congelador i Timbre. Sempre actualitzat.",
+  },
+  {
+    icon: "⏰",
+    title: "Control de caducitats",
+    description:
+      "Sistema semaforic que t'avisa quan un lot esta a punt de caducar. Verd, groc o vermell d'un cop d'ull.",
+  },
+  {
+    icon: "📝",
+    title: "Registre de produccions",
+    description:
+      "Registra cada produccio amb quantitat, lot i data de caducitat automatica. Trazabilitat completa.",
+  },
+  {
+    icon: "📊",
+    title: "Historial i mermes",
+    description:
+      "Consulta l'historial de 7 dies, controla les mermes per caducitat o mal estat, i analitza el consum.",
+  },
+  {
+    icon: "❄️",
+    title: "Gestio de congelacio",
+    description:
+      "Mou lots al congelador i la caducitat es pausa automaticament. Al descongelar, es reprenen les hores restants.",
+  },
+  {
+    icon: "🔒",
+    title: "Multi-restaurant",
+    description:
+      "Cada restaurant te les seves dades completament aillades. Acces segur per PIN sense complicacions.",
+  },
+];
+---
+
+<section id="features" class="py-20 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">
+        Tot el que necessites per controlar la teva cuina
+      </h2>
+      <p class="text-lg text-warm-500 max-w-2xl mx-auto">
+        Dissenyat amb caps de partida reals. Cada funcionalitat resol un problema concret del dia a dia.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature) => (
+        <div class="bg-warm-50 rounded-2xl p-8 border border-warm-200 hover:border-brand-300 transition-colors">
+          <div class="text-4xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl font-bold text-warm-900 mb-2">{feature.title}</h3>
+          <p class="text-warm-500 leading-relaxed">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

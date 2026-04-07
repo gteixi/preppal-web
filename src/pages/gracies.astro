@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Gracies! — Prep Pal"
+  description="Hem rebut el teu missatge. Et contactarem aviat."
+>
+  <Header />
+  <main class="pt-32 pb-20 px-6">
+    <div class="max-w-xl mx-auto text-center">
+      <div class="text-6xl mb-6">🎉</div>
+      <h1 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">
+        Gracies pel teu interes!
+      </h1>
+      <p class="text-lg text-warm-500 mb-8">
+        Hem rebut el teu missatge. Et contactarem en menys de 24 hores per
+        preparar la teva demo personalitzada.
+      </p>
+      <a
+        href="/"
+        class="inline-block bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-colors"
+      >
+        Tornar a l'inici
+      </a>
+    </div>
+  </main>
+  <Footer />
+</Layout>
