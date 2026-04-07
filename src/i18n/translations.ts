@@ -32,10 +32,10 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Dissenyat amb caps de partida reals. Cada funcionalitat resol un problema concret del dia a dia.",
     "features.stock.title": "Stock en temps real",
     "features.stock.description":
-      "Visualitza el stock actual de cada producte agrupat per estació: Partida, Cambra, Congelador i Timbre. Sempre actualitzat.",
+      "Visualitza el stock actual de cada producte agrupat per estació.",
     "features.expiry.title": "Control de caducitats",
     "features.expiry.description":
-      "Sistema semafòric que t'avisa quan un lot està a punt de caducar. Verd, groc o vermell d'un cop d'ull.",
+      "Sistema semafòric que t'avisa quan un lot està a punt de caducar.",
     "features.production.title": "Registre de produccions",
     "features.production.description":
       "Registra cada producció amb quantitat, lot i data de caducitat automàtica. Traçabilitat completa.",
@@ -48,6 +48,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     "features.predict.title": "Predicció intel\u00b7ligent",
     "features.predict.description":
       "Analitza el teu historial de produccions i consum per predir les quantitats òptimes. Evita sobreproduir i redueix el malbaratament.",
+    "features.ai.title": "IA per a caducitats",
+    "features.ai.description":
+      "La intel\u00b7ligència artificial revisa automàticament les caducitats de totes les produccions i t'avisa abans que sigui tard.",
+    "features.recipes.title": "Receptes i fotografies",
+    "features.recipes.description":
+      "Guarda les receptes de cada producció amb ingredients, passos i fotografies.",
 
     // How it works
     "how.title": "Senzill com ha de ser",
@@ -141,10 +147,10 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Diseñado con jefes de partida reales. Cada funcionalidad resuelve un problema concreto del día a día.",
     "features.stock.title": "Stock en tiempo real",
     "features.stock.description":
-      "Visualiza el stock actual de cada producto agrupado por estación: Partida, Cámara, Congelador y Timbre. Siempre actualizado.",
+      "Visualiza el stock actual de cada producto agrupado por estación.",
     "features.expiry.title": "Control de caducidades",
     "features.expiry.description":
-      "Sistema semafórico que te avisa cuando un lote está a punto de caducar. Verde, amarillo o rojo de un vistazo.",
+      "Sistema semafórico que te avisa cuando un lote está a punto de caducar.",
     "features.production.title": "Registro de producciones",
     "features.production.description":
       "Registra cada producción con cantidad, lote y fecha de caducidad automática. Trazabilidad completa.",
@@ -157,6 +163,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     "features.predict.title": "Predicción inteligente",
     "features.predict.description":
       "Analiza tu historial de producciones y consumo para predecir las cantidades óptimas. Evita sobreproducir y reduce el desperdicio.",
+    "features.ai.title": "IA para caducidades",
+    "features.ai.description":
+      "La inteligencia artificial revisa automáticamente las caducidades de todas las producciones y te avisa antes de que sea tarde.",
+    "features.recipes.title": "Recetas y fotografías",
+    "features.recipes.description":
+      "Guarda las recetas de cada producción con ingredientes, pasos y fotografías.",
 
     // How it works
     "how.title": "Sencillo como debe ser",
