@@ -1,14 +1,21 @@
 ---
+import { t, type Lang } from "../i18n/translations";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
 ---
 
 <section id="contact" class="py-20 px-6">
   <div class="max-w-2xl mx-auto">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">
-        Parlem?
+        {t(lang, "contact.title")}
       </h2>
       <p class="text-lg text-warm-500">
-        Explica'ns sobre el teu restaurant i et prepararem una demo personalitzada.
+        {t(lang, "contact.subtitle")}
       </p>
     </div>
 
@@ -19,32 +26,32 @@
     >
       <input type="text" name="_honey" style="display:none" />
       <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value="https://preppal.com/gracies" />
+      <input type="hidden" name="_next" value={`https://preppal.com/${lang}/gracies`} />
 
       <div class="grid sm:grid-cols-2 gap-5">
         <div>
           <label for="name" class="block text-sm font-semibold text-warm-700 mb-1.5">
-            Nom
+            {t(lang, "contact.name")}
           </label>
           <input
             type="text"
             id="name"
             name="name"
             required
-            placeholder="Joan Garcia"
+            placeholder={t(lang, "contact.name.placeholder")}
             class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-warm-900 placeholder:text-warm-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
           />
         </div>
         <div>
           <label for="restaurant" class="block text-sm font-semibold text-warm-700 mb-1.5">
-            Restaurant
+            {t(lang, "contact.restaurant")}
           </label>
           <input
             type="text"
             id="restaurant"
             name="restaurant"
             required
-            placeholder="El Celler de Can Roca"
+            placeholder={t(lang, "contact.restaurant.placeholder")}
             class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-warm-900 placeholder:text-warm-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
           />
         </div>
@@ -52,40 +59,40 @@
 
       <div>
         <label for="email" class="block text-sm font-semibold text-warm-700 mb-1.5">
-          Email
+          {t(lang, "contact.email")}
         </label>
         <input
           type="email"
           id="email"
           name="email"
           required
-          placeholder="joan@elceller.cat"
+          placeholder={t(lang, "contact.email.placeholder")}
           class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-warm-900 placeholder:text-warm-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
         />
       </div>
 
       <div>
         <label for="phone" class="block text-sm font-semibold text-warm-700 mb-1.5">
-          Telefon
+          {t(lang, "contact.phone")}
         </label>
         <input
           type="tel"
           id="phone"
           name="phone"
-          placeholder="612 345 678"
+          placeholder={t(lang, "contact.phone.placeholder")}
           class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-warm-900 placeholder:text-warm-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent"
         />
       </div>
 
       <div>
         <label for="message" class="block text-sm font-semibold text-warm-700 mb-1.5">
-          Missatge
+          {t(lang, "contact.message")}
         </label>
         <textarea
           id="message"
           name="message"
           rows="4"
-          placeholder="Explica'ns una mica sobre la teva cuina i que necessites..."
+          placeholder={t(lang, "contact.message.placeholder")}
           class="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-warm-900 placeholder:text-warm-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent resize-none"
         ></textarea>
       </div>
@@ -94,7 +101,7 @@
         type="submit"
         class="w-full bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-colors cursor-pointer"
       >
-        Enviar missatge
+        {t(lang, "contact.submit")}
       </button>
     </form>
   </div>

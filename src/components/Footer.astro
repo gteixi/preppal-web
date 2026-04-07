@@ -1,13 +1,17 @@
 ---
+import { t, type Lang } from "../i18n/translations";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
 const year = new Date().getFullYear();
 ---
 
 <footer class="py-10 px-6 border-t border-warm-200 bg-white">
   <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-warm-500">
-    <div class="flex items-center gap-2">
-      <span class="text-lg">🍳</span>
-      <span class="font-semibold text-warm-700">Prep Pal</span>
-    </div>
-    <p>&copy; {year} Prep Pal. Tots els drets reservats.</p>
+    <span class="font-semibold text-warm-700">Prep Pal</span>
+    <p>&copy; {year} Prep Pal. {t(lang, "footer.rights")}</p>
   </div>
 </footer>

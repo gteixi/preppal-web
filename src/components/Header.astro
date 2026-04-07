@@ -1,22 +1,38 @@
 ---
+import { t, type Lang, languages } from "../i18n/translations";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const otherLang = lang === "ca" ? "es" : "ca";
+const otherLabel = lang === "ca" ? "ES" : "CA";
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-warm-200">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2 text-xl font-bold text-warm-900">
-      <span class="text-2xl">🍳</span>
-      <span>Prep Pal</span>
+    <a href={`/${lang}/`} class="text-xl font-bold text-warm-900">
+      Prep Pal
     </a>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-warm-600">
-      <a href="#features" class="hover:text-warm-900 transition-colors">Funcionalidades</a>
-      <a href="#how-it-works" class="hover:text-warm-900 transition-colors">Como funciona</a>
-      <a href="#pricing" class="hover:text-warm-900 transition-colors">Precios</a>
+      <a href="#features" class="hover:text-warm-900 transition-colors">{t(lang, "nav.features")}</a>
+      <a href="#how-it-works" class="hover:text-warm-900 transition-colors">{t(lang, "nav.howItWorks")}</a>
+      <a href="#pricing" class="hover:text-warm-900 transition-colors">{t(lang, "nav.pricing")}</a>
     </nav>
-    <a
-      href="#contact"
-      class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
-    >
-      Contactar
-    </a>
+    <div class="flex items-center gap-3">
+      <a
+        href={`/${otherLang}/`}
+        class="text-sm font-semibold text-warm-500 hover:text-warm-900 transition-colors px-2 py-1"
+      >
+        {otherLabel}
+      </a>
+      <a
+        href="#contact"
+        class="bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
+      >
+        {t(lang, "nav.contact")}
+      </a>
+    </div>
   </div>
 </header>

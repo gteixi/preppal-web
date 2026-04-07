@@ -1,60 +1,51 @@
 ---
+import { t, type Lang } from "../i18n/translations";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+
+const featureKeys = ["1", "2", "3", "4", "5", "6"];
 ---
 
 <section id="pricing" class="py-20 px-6 bg-white">
   <div class="max-w-4xl mx-auto">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-warm-900 mb-4">
-        Un pla senzill, sense sorpreses
+        {t(lang, "pricing.title")}
       </h2>
       <p class="text-lg text-warm-500">
-        Preu adaptat a la mida del teu restaurant. Contacta'ns per a un pressupost personalitzat.
+        {t(lang, "pricing.subtitle")}
       </p>
     </div>
 
     <div class="bg-warm-50 border border-warm-200 rounded-2xl p-10 md:p-14 text-center max-w-xl mx-auto">
       <div class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-4">
-        Prep Pal Professional
+        {t(lang, "pricing.plan")}
       </div>
       <div class="text-5xl font-bold text-warm-900 mb-2">
-        A mida
+        {t(lang, "pricing.price")}
       </div>
       <p class="text-warm-500 mb-8">
-        Subscripcio mensual adaptada al teu volum
+        {t(lang, "pricing.period")}
       </p>
 
       <ul class="text-left space-y-3 mb-10 text-warm-700">
-        <li class="flex items-start gap-3">
-          <span class="text-brand-500 mt-0.5 font-bold">&#10003;</span>
-          Stock en temps real per estacio
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-500 mt-0.5 font-bold">&#10003;</span>
-          Control de caducitats amb alertes
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-500 mt-0.5 font-bold">&#10003;</span>
-          Registre de produccions i mermes
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-500 mt-0.5 font-bold">&#10003;</span>
-          Gestio de congelacio automatica
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-500 mt-0.5 font-bold">&#10003;</span>
-          Historial i estadistiques
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="text-brand-500 mt-0.5 font-bold">&#10003;</span>
-          Suport dedicat i formacio inicial
-        </li>
+        {featureKeys.map((key) => (
+          <li class="flex items-start gap-3">
+            <span class="text-brand-500 mt-0.5 font-bold">&#10003;</span>
+            {t(lang, `pricing.feature${key}`)}
+          </li>
+        ))}
       </ul>
 
       <a
         href="#contact"
         class="inline-block bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-colors w-full"
       >
-        Demana pressupost
+        {t(lang, "pricing.cta")}
       </a>
     </div>
   </div>
