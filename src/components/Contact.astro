@@ -20,13 +20,13 @@ const { lang } = Astro.props;
     </div>
 
     <form
-      action="https://formsubmit.co/gemmateixido25@gmail.com"
+      action="https://api.web3forms.com/submit"
       method="POST"
       class="space-y-5"
     >
-      <input type="text" name="_honey" style="display:none" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_next" value={`https://preppal.com/${lang}/gracies`} />
+      <input type="hidden" name="access_key" value="fff2a0e5-d4c1-48ce-a41d-93091de94ce5" />
+      <input type="hidden" name="redirect" value={`https://preppal.com/${lang}/gracies`} />
+      <input type="checkbox" name="botcheck" class="hidden" />
 
       <div class="grid sm:grid-cols-2 gap-5">
         <div>
