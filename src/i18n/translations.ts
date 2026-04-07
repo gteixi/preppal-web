@@ -14,6 +14,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "nav.features": "Funcionalitats",
     "nav.howItWorks": "Com funciona",
     "nav.pricing": "Preus",
+    "nav.demo": "Demo",
     "nav.contact": "Contactar",
 
     // Hero
@@ -94,6 +95,11 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Explica'ns una mica sobre la teva cuina i què necessites...",
     "contact.submit": "Enviar missatge",
 
+    // Demo
+    "demo.title": "Mira com funciona",
+    "demo.subtitle":
+      "Així es veu el teu stock en temps real. Estacions, lots i caducitats d'un cop d'ull.",
+
     // Footer
     "footer.rights": "Tots els drets reservats.",
 
@@ -117,6 +123,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "nav.features": "Funcionalidades",
     "nav.howItWorks": "Cómo funciona",
     "nav.pricing": "Precios",
+    "nav.demo": "Demo",
     "nav.contact": "Contactar",
 
     // Hero
@@ -196,6 +203,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     "contact.message.placeholder":
       "Cuéntanos un poco sobre tu cocina y qué necesitas...",
     "contact.submit": "Enviar mensaje",
+
+    // Demo
+    "demo.title": "Mira cómo funciona",
+    "demo.subtitle":
+      "Así se ve tu stock en tiempo real. Estaciones, lotes y caducidades de un vistazo.",
 
     // Footer
     "footer.rights": "Todos los derechos reservados.",
