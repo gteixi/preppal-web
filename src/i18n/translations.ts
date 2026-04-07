@@ -57,7 +57,7 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Defineix els productes que elabores, amb unitats, hores de vida util i a quina estacio pertanyen.",
     "how.step2.title": "Registra el dia a dia",
     "how.step2.description":
-      "Cada cop que produeixes, toca el boto i registra la quantitat. El lot i la caducitat es calculen sols.",
+      "Cada cop que produeixes, toca el boto i registra la quantitat.",
     "how.step3.title": "Visualitza el teu stock",
     "how.step3.description":
       "El panell principal mostra tot el stock organitzat per estacions amb codis de color segons la caducitat.",
@@ -160,7 +160,7 @@ export const translations: Record<Lang, Record<string, string>> = {
       "Define los productos que elaboras, con unidades, horas de vida util y a que estacion pertenecen.",
     "how.step2.title": "Registra el dia a dia",
     "how.step2.description":
-      "Cada vez que produces, toca el boton y registra la cantidad. El lote y la caducidad se calculan solos.",
+      "Cada vez que produces, toca el boton y registra la cantidad.",
     "how.step3.title": "Visualiza tu stock",
     "how.step3.description":
       "El panel principal muestra todo el stock organizado por estaciones con codigos de color segun la caducidad.",
