@@ -8,7 +8,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Meta
     "meta.title": "Prep Pal — Gestio de stock per a cuines professionals",
     "meta.description":
-      "Controla produccions, caducitats i mermes en temps real. Dissenyat per a tablets de cuina professional.",
+      "Controla produccions, caducitats i mermes en temps real.",
 
     // Header
     "nav.features": "Funcionalitats",
@@ -21,7 +21,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.title.line1": "Control total del teu",
     "hero.title.highlight": "stock de cuina",
     "hero.description":
-      "Registra produccions, controla caducitats i gestiona mermes en temps real. Dissenyat per a tablets de cuina professional.",
+      "Registra produccions, controla caducitats i gestiona mermes en temps real.",
     "hero.cta.demo": "Sol\u00b7licita una demo",
     "hero.cta.features": "Veure funcionalitats",
 
@@ -111,7 +111,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "meta.title":
       "Prep Pal — Gestion de stock para cocinas profesionales",
     "meta.description":
-      "Controla producciones, caducidades y mermas en tiempo real. Disenado para tablets de cocina profesional.",
+      "Controla producciones, caducidades y mermas en tiempo real.",
 
     // Header
     "nav.features": "Funcionalidades",
@@ -124,7 +124,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.title.line1": "Control total de tu",
     "hero.title.highlight": "stock de cocina",
     "hero.description":
-      "Registra producciones, controla caducidades y gestiona mermas en tiempo real. Disenado para tablets de cocina profesional.",
+      "Registra producciones, controla caducidades y gestiona mermas en tiempo real.",
     "hero.cta.demo": "Solicita una demo",
     "hero.cta.features": "Ver funcionalidades",
 
