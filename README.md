@@ -2,6 +2,10 @@
 
 Marketing site for **Prep Pal**, a stock management app for professional kitchens.
 
+## Demo
+
+[Live site](https://preppal-web.vercel.app)
+
 ## Tech Stack
 
 - [Astro](https://astro.build) v6
